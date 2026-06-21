@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""100 块锚定法验算。用法: python calc_anchor.py --pb 35.22 --pe 40.4"""
+"""100 块锚定法验算。用法: python calc_anchor.py --pb 40.4 --pe 35.22"""
 from __future__ import annotations
 
 import argparse

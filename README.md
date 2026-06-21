@@ -10,37 +10,40 @@
 
 ## 安装
 
-克隆或复制内层 `NoodleShopOwner/` 到 `.cursor/skills/NoodleShopOwner/`（项目级）或 `~/.cursor/skills/`（全局）：
+克隆本仓库（GitHub 名 `NoodleShopOwner`，Skill 目录名 `noodles-shop-owner`），将内层 `noodles-shop-owner/` 复制到 `.cursor/skills/noodles-shop-owner/`（项目级）或 `~/.cursor/skills/`（全局）：
 
 ```bash
 git clone https://github.com/forMyReason/NoodleShopOwner.git
 cd NoodleShopOwner
-# 复制内层 NoodleShopOwner/（含 SKILL.md）到 skills 目录：
+# 复制内层 noodles-shop-owner/（含 SKILL.md）到 skills 目录：
 
-# 全局
-cp -r NoodleShopOwner ~/.cursor/skills/NoodleShopOwner
+# 全局（macOS / Linux / Git Bash）
+cp -r noodles-shop-owner ~/.cursor/skills/noodles-shop-owner
+
+# 全局（Windows PowerShell）
+# Copy-Item -Recurse noodles-shop-owner $env:USERPROFILE\.cursor\skills\noodles-shop-owner
 
 # 项目级
-# cp -r NoodleShopOwner your-project/.cursor/skills/NoodleShopOwner
+# cp -r noodles-shop-owner your-project/.cursor/skills/noodles-shop-owner
 ```
 
 支持 Cursor / Codex / Claude Code。
 
-验算可选：Python 3.10+，运行 `NoodleShopOwner/scripts/calc_anchor.py --self-check`。
+验算可选：Python 3.10+，运行 `noodles-shop-owner/scripts/calc_anchor.py --self-check`。
 
 ---
 
 ## 使用
 
-在 Agent 对话中 `@NoodleShopOwner`，或说「100 块法」「对比苹果和腾讯」等。示例：
+在 Agent 对话中 `@noodles-shop-owner`，或说「100 块法」「对比苹果和腾讯」等。示例：
 
 ```
 帮我用 100 块法对比分析苹果和腾讯 2025 年财报
 ```
 
-完整输出结构与话术见 [examples.md](NoodleShopOwner/examples.md)。
+完整输出结构与话术见 [examples.md](noodles-shop-owner/examples.md)。
 
-**100 块法**：统一锚定市值 = 100，算家底 `100÷PB`、利润（盈利 `100÷PE`，亏损走市值缩放）、ROE = 利润÷家底。公式与边界见 [reference.md](http://reference.md)。
+**100 块法**：统一锚定市值 = 100，算家底 `100÷PB`、利润（盈利 `100÷PE`，亏损走市值缩放）、ROE = 利润÷家底。公式与边界见 [reference.md](noodles-shop-owner/reference.md)。
 
 ---
 
@@ -49,10 +52,10 @@ cp -r NoodleShopOwner ~/.cursor/skills/NoodleShopOwner
 
 | 文件                                                       | 说明                |
 | -------------------------------------------------------- | ----------------- |
-| [SKILL.md](NoodleShopOwner/SKILL.md)                     | Agent 路由、SOP、停损规则 |
-| [reference.md](NoodleShopOwner/reference.md)             | 公式细则、亏损路径、输出模板    |
-| [examples.md](NoodleShopOwner/examples.md)               | 苹果 vs 腾讯双公司演示     |
-| [calc_anchor.py](NoodleShopOwner/scripts/calc_anchor.py) | 本地验算（stdlib only） |
+| [SKILL.md](noodles-shop-owner/SKILL.md)                     | Agent 路由、SOP、停损规则 |
+| [reference.md](noodles-shop-owner/reference.md)             | 公式细则、亏损路径、输出模板    |
+| [examples.md](noodles-shop-owner/examples.md)               | 苹果 vs 腾讯双公司演示     |
+| [calc_anchor.py](noodles-shop-owner/scripts/calc_anchor.py) | 本地验算（stdlib only） |
 
 
 ---
